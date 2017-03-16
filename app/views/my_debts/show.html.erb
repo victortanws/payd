@@ -6,10 +6,22 @@
   <div class="col-md-12 mb-2">
     <dl class="dl-horizontal">
       <dt>User</dt>
-      <dd><%= @my_debt.user_id %></dd>
+      <dd>
+        <% if @my_debt.user.present? %>
+          <a href="/users/<%= @my_debt.user_id %>">
+            <%= @my_debt.user.email %>
+          </a>
+        <% end %>
+      </dd>
 
       <dt>Other</dt>
-      <dd><%= @my_debt.other_id %></dd>
+      <dd>
+        <% if @my_debt.other.present? %>
+          <a href="/users/<%= @my_debt.other_id %>">
+            <%= @my_debt.other.email %>
+          </a>
+        <% end %>
+      </dd>
 
     </dl>
 
