@@ -5,6 +5,8 @@ class PaymentInformation < ApplicationRecord
 
   # Validations
 
+  validates :cardholder_name, :presence => true
+
   validates :cvv, :numericality => true
 
   validates :cvv, :length => { :minimum => 3, :maximum => 3 }
