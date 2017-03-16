@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  root :to => "payment_informations#index"
+  root :to => "payments#index"
   # Routes for the My_debt resource:
   # CREATE
   get "/my_debts/new", :controller => "my_debts", :action => "new"

@@ -1,7 +1,7 @@
 <div class="page-header">
   <h1>
     Payments
-    <a href="/payments/new" class="btn btn-lg btn-success">New Payment</a>
+    <a href="/payments/new" class="btn btn-lg btn-success">Make A Payment!</a>
   </h1>
 </div><div class="row mb-1">
   <div class="col-md-12">
@@ -97,11 +97,11 @@
   <div class="col-md-12">
     <table class="table table-striped table-hover">
       <tr>
-        <th>User</th>
-        <th>Other</th>
+        <th>Initiated by</th>
+        <th>Linked to</th>
         <th>Description</th>
         <th>Amount paid</th>
-        <th>Payment</th>
+        <th>Payment?</th>
         <th>Actions</th>
       </tr>
 
@@ -123,10 +123,10 @@
         </td>
         <td><%= payment.description %></td>
         <td><%= payment.amount_paid %></td>
-        <td><%= payment.payment %></td>
+        <td><%= payment.payment %> </td>
         <td>
           <a href="/payments/<%= payment.id %>" class="btn btn-primary">Show</a>
-          
+
           <% if current_user == payment.user %>
             <a href="/payments/<%= payment.id %>/edit" class="btn btn-warning">Edit</a>
             <a href="/delete_payment/<%= payment.id %>" class="btn btn-danger" rel="nofollow">Delete</a>

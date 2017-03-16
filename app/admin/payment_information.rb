@@ -2,6 +2,8 @@ ActiveAdmin.register PaymentInformation do
 
  permit_params :user_id, :cardholder_name, :card_number, :card_type, :cvv
 
+ # change_column :card_number, :column, :string, :limit => nil
+
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #

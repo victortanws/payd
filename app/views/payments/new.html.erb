@@ -24,7 +24,7 @@
       <!-- Label and input for other_id -->
       <div class="form-group">
         <label for="other_id" class="control-label">
-          Other
+          To
         </label>
 
         <%= select_tag(:other_id, options_from_collection_for_select(User.all, :id, :email, @payment.other_id), :class => "form-control") %>
@@ -52,7 +52,7 @@
       <div class="checkbox">
         <label for="payment">
           <input type="checkbox" id="payment" name="payment" value="1" <%= "checked" if @payment.payment %>>
-          Payment
+          Check if this is a payment, leave blank if it is a charge
         </label>
       </div>
 

@@ -16,5 +16,6 @@ class Payment < ApplicationRecord
   # Indirect associations
 
   # Validations
+  validates :amount_paid, :numericality => true, :presence => true
 
 end

@@ -14,6 +14,7 @@ class PaymentsController < ApplicationController
     @payments = @q.result(:distinct => true).includes(:user, :creditordebtor, :comments, :likes).page(params[:page]).per(10)
 
     render("payments/index.html.erb")
+
   end
 
   def show
